@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		5A6A171025B28A36006275C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A170E25B28A36006275C8 /* Main.storyboard */; };
 		5A6A171225B28A37006275C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A171125B28A37006275C8 /* Assets.xcassets */; };
 		5A6A171525B28A37006275C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A171325B28A37006275C8 /* LaunchScreen.storyboard */; };
+		5A6A172025B2986C006275C8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A171F25B2986C006275C8 /* Product.swift */; };
 		C30BF98B008FC1AAF900E518 /* Pods_EcoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		5A6A171125B28A37006275C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A6A171425B28A37006275C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6A171625B28A37006275C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6A171F25B2986C006275C8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46953AD14F8DFCF42B396F /* Pods-EcoStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoStore.debug.xcconfig"; path = "Target Support Files/Pods-EcoStore/Pods-EcoStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +50,6 @@
 				FC46953AD14F8DFCF42B396F /* Pods-EcoStore.debug.xcconfig */,
 				238A50F4456C13434E1D833C /* Pods-EcoStore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,12 +85,21 @@
 				5A6A170825B28A36006275C8 /* AppDelegate.swift */,
 				5A6A170A25B28A36006275C8 /* SceneDelegate.swift */,
 				5A6A170C25B28A36006275C8 /* ViewController.swift */,
+				5A6A171E25B2985B006275C8 /* Objects */,
 				5A6A170E25B28A36006275C8 /* Main.storyboard */,
 				5A6A171125B28A37006275C8 /* Assets.xcassets */,
 				5A6A171325B28A37006275C8 /* LaunchScreen.storyboard */,
 				5A6A171625B28A37006275C8 /* Info.plist */,
 			);
 			path = EcoStore;
+			sourceTree = "<group>";
+		};
+		5A6A171E25B2985B006275C8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A171F25B2986C006275C8 /* Product.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6A170D25B28A36006275C8 /* ViewController.swift in Sources */,
+				5A6A172025B2986C006275C8 /* Product.swift in Sources */,
 				5A6A170925B28A36006275C8 /* AppDelegate.swift in Sources */,
 				5A6A170B25B28A36006275C8 /* SceneDelegate.swift in Sources */,
 			);
