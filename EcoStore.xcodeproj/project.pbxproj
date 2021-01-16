@@ -15,6 +15,7 @@
 		5A6A171525B28A37006275C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A171325B28A37006275C8 /* LaunchScreen.storyboard */; };
 		5A6A172025B2986C006275C8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A171F25B2986C006275C8 /* Product.swift */; };
 		5D3AD52825B2A57000516CC4 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AD52725B2A57000516CC4 /* Cells.swift */; };
+		5D6DD62225B2C06C0002C6C6 /* ProductUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */; };
 		C30BF98B008FC1AAF900E518 /* Pods_EcoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		5A6A171625B28A37006275C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6A171F25B2986C006275C8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5D3AD52725B2A57000516CC4 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUIViewController.swift; sourceTree = "<group>"; };
 		FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46953AD14F8DFCF42B396F /* Pods-EcoStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoStore.debug.xcconfig"; path = "Target Support Files/Pods-EcoStore/Pods-EcoStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				5A6A170C25B28A36006275C8 /* ViewController.swift */,
 				5A6A171E25B2985B006275C8 /* Objects */,
 				5A6A170E25B28A36006275C8 /* Main.storyboard */,
+				5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */,
 				5A6A171125B28A37006275C8 /* Assets.xcassets */,
 				5A6A171325B28A37006275C8 /* LaunchScreen.storyboard */,
 				5A6A171625B28A37006275C8 /* Info.plist */,
@@ -223,6 +226,7 @@
 				5A6A172025B2986C006275C8 /* Product.swift in Sources */,
 				5A6A170925B28A36006275C8 /* AppDelegate.swift in Sources */,
 				5A6A170B25B28A36006275C8 /* SceneDelegate.swift in Sources */,
+				5D6DD62225B2C06C0002C6C6 /* ProductUIViewController.swift in Sources */,
 				5D3AD52825B2A57000516CC4 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
