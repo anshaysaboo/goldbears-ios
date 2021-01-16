@@ -610,6 +610,20 @@
             <point key="canvasLocation" x="-207.24637681159422" y="93.75"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6Jc-GK-i29">
+            <size key="intrinsicContentSize" width="154" height="34"/>
+        </designable>
+        <designable name="HFk-qm-NqJ">
+            <size key="intrinsicContentSize" width="154" height="34"/>
+        </designable>
+        <designable name="alh-ts-hbZ">
+            <size key="intrinsicContentSize" width="374" height="16"/>
+        </designable>
+        <designable name="iPk-Za-mRP">
+            <size key="intrinsicContentSize" width="154" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="banner-image" width="800" height="452"/>
         <image name="candle" width="700" height="700"/>
