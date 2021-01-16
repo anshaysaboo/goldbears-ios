@@ -13,3 +13,7 @@ import UIKit
 class ProductCollectionViewCell: UICollectionViewCell {
     
 }
+
+class ShopCollectionViewCell: UICollectionViewCell {
+    
+}
