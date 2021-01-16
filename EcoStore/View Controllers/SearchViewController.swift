@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TagListView
 
 class SearchViewController: UIViewController {
     
@@ -19,13 +20,8 @@ class SearchViewController: UIViewController {
         searchField.delegate = self
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-        let flowLayout = UICollectionViewFlowLayout()
-        productCollectionView.collectionViewLayout = flowLayout
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        loadResults()
-    }
+
     
     func loadResults() {
         let query = searchField.text!
@@ -59,7 +55,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCollectionViewCell
         let product = products[indexPath.row]
         
-        cell.nameLabel.text = product.title
+        cell.setup(product)
         
         return cell
     }

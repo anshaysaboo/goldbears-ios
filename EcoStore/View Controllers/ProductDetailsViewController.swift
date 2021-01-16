@@ -12,8 +12,8 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var descriptionView: UITextView!
+    @IBOutlet weak var storeLabel: UIButton!
     @IBOutlet weak var charityLabel: UILabel!
     
     var product: Product!
@@ -23,9 +23,11 @@ class ProductDetailsViewController: UIViewController {
         
         titleLabel.text = product.title
         priceLabel.text = String(format: "$%.2f", product.price)
-        storeLabel.text = "By " + product.storeTitle
+        storeLabel.setTitle("By " + product.storeTitle, for: .normal)
         descriptionView.text = product.description
         charityLabel.text = "Supporting " + product.charity + "\n with \(  product.percentDonated) % of price"
     }
 
+    @IBAction func storeLabelClicked(_ sender: Any) {
+    }
 }

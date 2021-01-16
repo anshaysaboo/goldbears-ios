@@ -8,5 +8,6 @@ target 'EcoStore' do
   # Pods for EcoStore
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'TagListView', '~> 1.0'
 
 end

@@ -42,4 +42,19 @@ class APIManager {
         }
     }
     
+    
+    // Returns the details and products for a store given its id
+    // @param id The ID of the store for which to find products
+    static func getStoreDetails(id: String, completion: @escaping (Store?, Bool) -> Void) {
+        AF.request(getURL("/store/" + id), method: .get).responseData { (response) in
+            if response.error != nil {
+                completion(nil, false)
+                return
+            }
+            let json = try! JSON(data: response.data!)
+            completion(Store(json: json), true)
+        }
+    }
+
+    
 }
