@@ -15,7 +15,31 @@ class APIManager {
     
     // Returns a formatted API URL for the given path
     private static func getURL(_ path: String) -> String {
-        return BASE_URL + path
+        return BASE_URL + "/api" + path
+    }
+    
+    // Returns a list of Products for a given search query
+    // @param query The query string for which to find products
+    private static func searchForProducts(query: String, completion: @escaping ([Product], Bool) -> Void) {
+        AF.request(getURL("/products/search"), method: .get, parameters: ["query" : query]).responseData { (response) in
+            if response.error != nil {
+                completion([], false)
+                return
+            }
+            
+            let json = try! JSON(data: response.data!)
+            guard let productsJSON = json.array else {
+                completion([], false)
+                return
+            }
+            
+            var products: [Product] = []
+            for prodJson: JSON in productsJSON {
+                products.append(Product(json: prodJson))
+            }
+            
+            completion(products, true)
+        }
     }
     
 }
