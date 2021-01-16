@@ -18,7 +18,7 @@
 		5AD2281525B2D9F0006E2C71 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2281425B2D9F0006E2C71 /* Store.swift */; };
 		5D3AD52825B2A57000516CC4 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AD52725B2A57000516CC4 /* Cells.swift */; };
 		5D46819825B2D9D800100580 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46819725B2D9D800100580 /* ShopViewController.swift */; };
-		5D6DD62225B2C06C0002C6C6 /* ProductUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */; };
+		5D6DD62225B2C06C0002C6C6 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DD62125B2C06C0002C6C6 /* ProductDetailsViewController.swift */; };
 		C30BF98B008FC1AAF900E518 /* Pods_EcoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		5AD2281425B2D9F0006E2C71 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5D3AD52725B2A57000516CC4 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		5D46819725B2D9D800100580 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUIViewController.swift; sourceTree = "<group>"; };
+		5D6DD62125B2C06C0002C6C6 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		FB73EE86095440F6BF4F37D5 /* Pods_EcoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46953AD14F8DFCF42B396F /* Pods-EcoStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoStore.debug.xcconfig"; path = "Target Support Files/Pods-EcoStore/Pods-EcoStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,12 +94,10 @@
 			children = (
 				5A6A170825B28A36006275C8 /* AppDelegate.swift */,
 				5A6A170A25B28A36006275C8 /* SceneDelegate.swift */,
-				5A6A170C25B28A36006275C8 /* SearchViewController.swift */,
+				5A9A67AB25B2F62300FAA735 /* View Controllers */,
 				5AD2281125B2D7CA006E2C71 /* APIManager.swift */,
 				5A6A171E25B2985B006275C8 /* Objects */,
 				5A6A170E25B28A36006275C8 /* Main.storyboard */,
-				5D46819725B2D9D800100580 /* ShopViewController.swift */,
-				5D6DD62125B2C06C0002C6C6 /* ProductUIViewController.swift */,
 				5A6A171125B28A37006275C8 /* Assets.xcassets */,
 				5A6A171325B28A37006275C8 /* LaunchScreen.storyboard */,
 				5A6A171625B28A37006275C8 /* Info.plist */,
@@ -115,6 +113,16 @@
 				5D3AD52725B2A57000516CC4 /* Cells.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		5A9A67AB25B2F62300FAA735 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A170C25B28A36006275C8 /* SearchViewController.swift */,
+				5D6DD62125B2C06C0002C6C6 /* ProductDetailsViewController.swift */,
+				5D46819725B2D9D800100580 /* ShopViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +245,7 @@
 				5AD2281525B2D9F0006E2C71 /* Store.swift in Sources */,
 				5A6A170B25B28A36006275C8 /* SceneDelegate.swift in Sources */,
 				5D46819825B2D9D800100580 /* ShopViewController.swift in Sources */,
-				5D6DD62225B2C06C0002C6C6 /* ProductUIViewController.swift in Sources */,
+				5D6DD62225B2C06C0002C6C6 /* ProductDetailsViewController.swift in Sources */,
 				5D3AD52825B2A57000516CC4 /* Cells.swift in Sources */,
 				5AD2281225B2D7CA006E2C71 /* APIManager.swift in Sources */,
 			);

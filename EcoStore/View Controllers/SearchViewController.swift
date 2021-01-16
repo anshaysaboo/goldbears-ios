@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchField.delegate = self
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
         let flowLayout = UICollectionViewFlowLayout()
@@ -28,9 +29,9 @@ class SearchViewController: UIViewController {
     
     func loadResults() {
         let query = searchField.text!
-        // if query.isEmpty { return }
+        if query.isEmpty { return }
         
-        APIManager.searchForProducts(query: "candle") { (products, success) in
+        APIManager.searchForProducts(query: query) { (products, success) in
             if !success {
                 // TODO: Display error box
                 return
@@ -45,7 +46,9 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        let details = storyboard?.instantiateViewController(identifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        details.product = products[indexPath.row]
+        self.present(details, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -81,10 +84,10 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(translationX: 0, y: cell.frame.height / 2)
+        cell.transform = CGAffineTransform(translationX: 0, y: cell.frame.height / 4)
         cell.alpha = 0
         UIView.animate(
-            withDuration: 0.35,
+            withDuration: 0.15,
             delay: indexPath.row < 8 ? 0.1*Double(indexPath.row) : 0.05,
             options: [.curveEaseInOut],
             animations: {
@@ -93,4 +96,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         })
     }
 
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.loadResults()
+        return true
+    }
 }
