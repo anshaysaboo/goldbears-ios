@@ -29,5 +29,9 @@ class ProductDetailsViewController: UIViewController {
     }
 
     @IBAction func storeLabelClicked(_ sender: Any) {
+        let shopVc = storyboard?.instantiateViewController(identifier: "ShopViewController") as! ShopViewController
+        shopVc.id = product!.storeId
+        self.modalPresentationStyle = .overFullScreen
+        self.present(shopVc, animated: true, completion: nil)
     }
 }

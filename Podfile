@@ -9,5 +9,6 @@ target 'EcoStore' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'TagListView', '~> 1.0'
+  pod 'Cosmos', '~> 23.0'
 
 end

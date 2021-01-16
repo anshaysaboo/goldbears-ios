@@ -37,7 +37,7 @@ class Product {
         
         if let storeJson = json["storeId"].dictionary {
             self.storeTitle = storeJson["title"]!.string!
-            self.storeId = String(describing: storeJson["_id"]?.string)
+            self.storeId = storeJson["_id"]!.string!
         }
     }
     

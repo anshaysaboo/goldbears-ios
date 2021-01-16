@@ -8,10 +8,11 @@
 import UIKit
 import TagListView
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, TagListViewDelegate {
     
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet var productCollectionView: UICollectionView!
+    @IBOutlet weak var tagsView: TagListView!
     
     var products: [Product] = []
 
@@ -20,10 +21,28 @@ class SearchViewController: UIViewController {
         searchField.delegate = self
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
+        
+        productCollectionView.isHidden = true
+        tagsView.isHidden = false
+        tagsView.addTags(["LGBTQ","Climate Change","BLM","Animal Welfare","Community Aid","Disaster Relief","Poverty","Immigration","Civil Rights","Gender Inequality"])
+        tagsView.textFont = UIFont.systemFont(ofSize: 18)
+        tagsView.delegate = self
+        tagsView.marginY = 5.0
+        tagsView.marginX = 5.0
+        tagsView.paddingY = 8
+        tagsView.paddingX = 12
+        tagsView.cornerRadius = 10.0
+    }
+    
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        searchField.text = title
+        loadResults()
     }
 
     
     func loadResults() {
+        productCollectionView.isHidden = false
+        tagsView.isHidden = true
         let query = searchField.text!
         if query.isEmpty { return }
         

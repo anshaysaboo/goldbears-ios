@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="EcoStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bPD-Mt-0RT">
-                                <rect key="frame" x="0.0" y="149" width="414" height="747"/>
+                                <rect key="frame" x="0.0" y="149" width="414" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mTg-te-DnL">
                                     <size key="itemSize" width="170" height="250"/>
@@ -130,16 +130,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alh-ts-hbZ" customClass="TagListView" customModule="TagListView">
+                                <rect key="frame" x="20" y="140" width="374" height="330"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="Ec4-Rb-d2V"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" name="Primary"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
+                                        <color key="value" name="Primary"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="alh-ts-hbZ" secondAttribute="trailing" constant="20" id="5HH-c9-OoZ"/>
                             <constraint firstItem="7JI-Ph-c0I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fki-mg-dYQ"/>
                             <constraint firstItem="bPD-Mt-0RT" firstAttribute="top" secondItem="7JI-Ph-c0I" secondAttribute="bottom" constant="29" id="I8B-KN-93a"/>
                             <constraint firstItem="bPD-Mt-0RT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ywl-qO-uJj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7JI-Ph-c0I" secondAttribute="trailing" constant="20" id="Yze-Yg-j8h"/>
+                            <constraint firstItem="alh-ts-hbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z1S-0q-6KR"/>
                             <constraint firstItem="7JI-Ph-c0I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="efR-MY-tLs"/>
                             <constraint firstItem="bPD-Mt-0RT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l6H-ub-sBg"/>
+                            <constraint firstItem="alh-ts-hbZ" firstAttribute="top" secondItem="7JI-Ph-c0I" secondAttribute="bottom" constant="20" id="mkR-6l-vHz"/>
                             <constraint firstAttribute="bottom" secondItem="bPD-Mt-0RT" secondAttribute="bottom" id="zF8-Yq-uTp"/>
                         </constraints>
                     </view>
@@ -147,6 +175,7 @@
                     <connections>
                         <outlet property="productCollectionView" destination="bPD-Mt-0RT" id="usR-0Q-ExQ"/>
                         <outlet property="searchField" destination="x7a-fi-wR2" id="fga-za-Duq"/>
+                        <outlet property="tagsView" destination="alh-ts-hbZ" id="Gs8-AW-egt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,6 +198,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Cool Sustainable Candle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRI-WV-VdL">
                                 <rect key="frame" x="20" y="330" width="264" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="okx-Bb-6Vm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,7 +244,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-6n-2Ee">
-                                <rect key="frame" x="154" y="537" width="106" height="29"/>
+                                <rect key="frame" x="288" y="490" width="106" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Primary"/>
                                 <state key="normal" title="Add to Cart">
@@ -256,7 +288,7 @@
         <!--Shop View Controller-->
         <scene sceneID="xCp-dD-zTG">
             <objects>
-                <viewController id="YgB-mQ-d9S" customClass="ShopViewController" customModule="EcoStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopViewController" id="YgB-mQ-d9S" customClass="ShopViewController" customModule="EcoStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7j-XL-wHI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,14 +406,35 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-pc-4kF">
+                                            <rect key="frame" x="8" y="8" width="30" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="NOP-YL-Uqr"/>
+                                                <constraint firstAttribute="width" constant="30" id="we2-Ah-xLj"/>
+                                            </constraints>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="closeClicked:" destination="YgB-mQ-d9S" eventType="touchUpInside" id="MTn-qG-AuJ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mmJ-YH-CAQ" firstAttribute="leading" secondItem="lQ5-K3-qs5" secondAttribute="leading" id="3RV-KA-ZL5"/>
                                         <constraint firstItem="tDG-KA-Cib" firstAttribute="leading" secondItem="lQ5-K3-qs5" secondAttribute="leadingMargin" constant="13" id="63g-jk-JuN"/>
                                         <constraint firstAttribute="trailing" secondItem="mmJ-YH-CAQ" secondAttribute="trailing" id="8dN-cS-B8i"/>
+                                        <constraint firstItem="Jmo-pc-4kF" firstAttribute="leading" secondItem="lQ5-K3-qs5" secondAttribute="leadingMargin" id="8nX-Pj-37K"/>
                                         <constraint firstItem="OWI-Xw-3lG" firstAttribute="leading" secondItem="lQ5-K3-qs5" secondAttribute="leadingMargin" constant="13" id="HqD-DC-G9c"/>
                                         <constraint firstItem="czL-92-0w1" firstAttribute="leading" secondItem="lQ5-K3-qs5" secondAttribute="leadingMargin" constant="13" id="IZY-Lm-iDS"/>
                                         <constraint firstItem="mmJ-YH-CAQ" firstAttribute="top" secondItem="lQ5-K3-qs5" secondAttribute="top" id="POI-QF-qqS"/>
+                                        <constraint firstItem="Jmo-pc-4kF" firstAttribute="top" secondItem="lQ5-K3-qs5" secondAttribute="topMargin" id="VTi-zM-GsA"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="tDG-KA-Cib" secondAttribute="trailing" constant="121" id="hEQ-iD-4Ts"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="OWI-Xw-3lG" secondAttribute="trailing" constant="12" id="jlv-yl-Gty"/>
                                         <constraint firstItem="OWI-Xw-3lG" firstAttribute="top" secondItem="mmJ-YH-CAQ" secondAttribute="bottom" constant="18" id="lVz-Rj-rFs"/>
@@ -420,10 +473,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0RR-yt-xwC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ju9-AR-xNY">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ju9-AR-xNY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Primary"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="D9k-am-dFd"/>

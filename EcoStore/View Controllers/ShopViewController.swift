@@ -13,15 +13,22 @@ class ShopViewController: UIViewController {
 
     var store: Store?
     var products: [Product] = []
+    
+    var id = ""
 
     override func viewDidLoad() {
         shopCollectionView.delegate = self
         shopCollectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadStore()
     }
     
     func loadStore() {
-        APIManager.getStoreDetails(id: "60027c63b10b44a8553080cf") { (store, success) in
+        print(id)
+        if id.isEmpty { return }
+        APIManager.getStoreDetails(id: id) { (store, success) in
             if !success || store == nil {
                 // TODO: HANDLE ERROR
                 return
@@ -33,6 +40,9 @@ class ShopViewController: UIViewController {
         }
     }
 
+    @IBAction func closeClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
