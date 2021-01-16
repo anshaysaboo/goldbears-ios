@@ -10,7 +10,7 @@ import SwiftyJSON
 
 // A Product represents a item that is listed for sale on the store
 class Product {
-    var name = ""
+    var title = ""
     var description = ""
     var price = 0.0
     var tags: [String] = []
@@ -22,7 +22,7 @@ class Product {
     var storeId = ""
     
     init(json: JSON) {
-        self.name = json["name"].string!
+        self.title = json["title"].string!
         self.description = json["description"].string!
         self.price = json["price"].double!
         self.charity = json["charity"].string!

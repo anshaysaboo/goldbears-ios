@@ -11,7 +11,8 @@ import UIKit
 // Each ProductCell displays a single product.
 
 class ProductCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
 }
 
 class ShopCollectionViewCell: UICollectionViewCell {

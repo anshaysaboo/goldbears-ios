@@ -9,5 +9,9 @@ import Foundation
 
 // A Store represents a store owned by a user that has a collection of products
 class Store {
+    var title = ""
+    var description = ""
+    var imageUrl = ""
     
+    var products: [Product] = []
 }
