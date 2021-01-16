@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A622D9625B3158B000C15A3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A622D9525B3158B000C15A3 /* FeedViewController.swift */; };
 		5A6A170925B28A36006275C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A170825B28A36006275C8 /* AppDelegate.swift */; };
 		5A6A170B25B28A36006275C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A170A25B28A36006275C8 /* SceneDelegate.swift */; };
 		5A6A170D25B28A36006275C8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A170C25B28A36006275C8 /* SearchViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		238A50F4456C13434E1D833C /* Pods-EcoStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoStore.release.xcconfig"; path = "Target Support Files/Pods-EcoStore/Pods-EcoStore.release.xcconfig"; sourceTree = "<group>"; };
+		5A622D9525B3158B000C15A3 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5A6A170525B28A36006275C8 /* EcoStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6A170825B28A36006275C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A6A170A25B28A36006275C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				5A6A170C25B28A36006275C8 /* SearchViewController.swift */,
 				5D6DD62125B2C06C0002C6C6 /* ProductDetailsViewController.swift */,
+				5A622D9525B3158B000C15A3 /* FeedViewController.swift */,
 				5D46819725B2D9D800100580 /* ShopViewController.swift */,
 			);
 			path = "View Controllers";
@@ -241,6 +244,7 @@
 			files = (
 				5A6A170D25B28A36006275C8 /* SearchViewController.swift in Sources */,
 				5A6A172025B2986C006275C8 /* Product.swift in Sources */,
+				5A622D9625B3158B000C15A3 /* FeedViewController.swift in Sources */,
 				5A6A170925B28A36006275C8 /* AppDelegate.swift in Sources */,
 				5AD2281525B2D9F0006E2C71 /* Store.swift in Sources */,
 				5A6A170B25B28A36006275C8 /* SceneDelegate.swift in Sources */,
@@ -396,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9AWCBJTMH;
+				DEVELOPMENT_TEAM = 7J6QXMLSWL;
 				INFOPLIST_FILE = EcoStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9AWCBJTMH;
+				DEVELOPMENT_TEAM = 7J6QXMLSWL;
 				INFOPLIST_FILE = EcoStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

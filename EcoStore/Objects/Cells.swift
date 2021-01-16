@@ -14,12 +14,14 @@ import TagListView
 class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var tagView: TagListView!
     
     func setup(_ product: Product) {
         self.nameLabel.text = product.title
         self.tagView.removeAllTags()
         self.tagView.addTags(product.tags)
+        self.priceLabel.text = String(format: "$%.2f", product.price)
     }
 }
 
