@@ -47,4 +47,3 @@ extension ViewController: UICollectionViewDataSource {
 }
 // Lets you specify margin and padding between each cell (WILL WORK ON THIS SOON)
 // extension ViewController: UICollectionViewDelegateFlowLayout{}
-
