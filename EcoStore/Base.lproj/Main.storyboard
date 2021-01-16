@@ -309,6 +309,22 @@
             </objects>
             <point key="canvasLocation" x="702.89855072463774" y="93.75"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="QtT-KV-bHk">
+            <objects>
+                <viewController id="jgG-6f-8od" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ku5-pI-8ba">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fdJ-1i-hw3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="phq-zE-9BL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwx-KV-n4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="760"/>
+        </scene>
         <!--Product Details View Controller-->
         <scene sceneID="aiF-gT-iMC">
             <objects>
@@ -375,6 +391,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-T2-5ug">
+                                <rect key="frame" x="114" y="460" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gFw-el-s3P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -622,6 +642,7 @@
                     <connections>
                         <segue destination="8sX-NM-J4f" kind="relationship" relationship="viewControllers" id="ZzP-y1-aDz"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="D9k-am-dFd"/>
+                        <segue destination="jgG-6f-8od" kind="relationship" relationship="viewControllers" id="fIQ-Sq-02I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxE-yK-CJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
