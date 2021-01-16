@@ -20,9 +20,6 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         feedCollectionView.delegate = self
         feedCollectionView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         loadResults()
     }
     

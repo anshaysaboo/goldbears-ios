@@ -11,7 +11,7 @@ import SwiftyJSON
 
 // An APIManager contains static methods that fetch data from the app server
 class APIManager {
-    private static let BASE_URL = "http://069a06a57cec.ngrok.io"
+    private static let BASE_URL = "http://02f0f72d34ae.ngrok.io"
     
     // Returns a formatted API URL for the given path
     private static func getURL(_ path: String) -> String {
