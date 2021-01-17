@@ -20,7 +20,7 @@
             <objects>
                 <viewController id="8sX-NM-J4f" customClass="FeedViewController" customModule="EcoStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUb-Km-4np">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vcX-kj-jzo">
@@ -141,7 +141,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="EcoStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bPD-Mt-0RT">
@@ -314,7 +314,7 @@
             <objects>
                 <viewController id="jgG-6f-8od" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ku5-pI-8ba">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co4-tH-Oe1">
@@ -388,7 +388,7 @@
             <objects>
                 <viewController id="hDl-SY-V4i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Is-yS-3q5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-ji-qdW">
@@ -947,7 +947,7 @@
         <image name="cart-icon" width="25" height="25"/>
         <image name="close-icon" width="512" height="512"/>
         <image name="feed-icon" width="25" height="25"/>
-        <image name="home-icon" width="75" height="75"/>
+        <image name="home-icon" width="25" height="25"/>
         <image name="search-icon" width="256" height="256"/>
         <namedColor name="Primary">
             <color red="0.96100002527236938" green="0.7369999885559082" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
