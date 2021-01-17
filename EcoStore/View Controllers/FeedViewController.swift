@@ -24,7 +24,7 @@ class FeedViewController: UIViewController {
     }
     
     func loadResults() {
-        APIManager.searchForProducts(query: "candle") { (products, success) in
+        APIManager.getProductFeed { (products, success) in
             if !success {
                 // TODO: Display error box
                 return

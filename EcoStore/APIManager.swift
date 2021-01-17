@@ -43,6 +43,29 @@ class APIManager {
         }
     }
     
+    // Returns a feed of Products
+    static func getProductFeed(completion: @escaping ([Product], Bool) -> Void) {
+        AF.request(getURL("/products/feed"), method: .get).responseData { (response) in
+            if response.error != nil {
+                completion([], false)
+                return
+            }
+            
+            let json = try! JSON(data: response.data!)
+            guard let productsJSON = json.array else {
+                completion([], false)
+                return
+            }
+            
+            var products: [Product] = []
+            for prodJson: JSON in productsJSON {
+                products.append(Product(json: prodJson))
+            }
+            
+            completion(products, true)
+        }
+    }
+    
     
     // Returns the details and products for a store given its id
     // @param id The ID of the store for which to find products

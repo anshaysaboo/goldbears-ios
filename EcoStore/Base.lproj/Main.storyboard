@@ -383,6 +383,21 @@
             </objects>
             <point key="canvasLocation" x="672.46376811594212" y="759.375"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="s9H-sU-WRX">
+            <objects>
+                <viewController id="hDl-SY-V4i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Is-yS-3q5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SkA-Vi-me1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOH-Fa-0LD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="1463"/>
+        </scene>
         <!--Product Details View Controller-->
         <scene sceneID="aiF-gT-iMC">
             <objects>
@@ -397,14 +412,14 @@
                                     <constraint firstAttribute="height" constant="260" id="UlK-gC-tqP"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9q-mK-xTQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9q-mK-xTQ">
                                 <rect key="frame" x="10" y="59" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WRL-az-ID8"/>
                                     <constraint firstAttribute="width" constant="30" id="sAB-Q1-1Yo"/>
                                 </constraints>
-                                <state key="normal" title="X">
+                                <state key="normal" image="close-icon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -689,14 +704,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-pc-4kF">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-pc-4kF">
                                             <rect key="frame" x="8" y="8" width="30" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="NOP-YL-Uqr"/>
                                                 <constraint firstAttribute="width" constant="30" id="we2-Ah-xLj"/>
                                             </constraints>
-                                            <state key="normal" title="X">
+                                            <state key="normal" image="close-icon">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -763,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgO-VH-R8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239.130434782609" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2235" y="108"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dil-Jn-TzY">
@@ -788,26 +803,10 @@
             <point key="canvasLocation" x="-207.24637681159422" y="93.75"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="6Jc-GK-i29">
-            <size key="intrinsicContentSize" width="154" height="34"/>
-        </designable>
-        <designable name="HFk-qm-NqJ">
-            <size key="intrinsicContentSize" width="154" height="34"/>
-        </designable>
-        <designable name="alh-ts-hbZ">
-            <size key="intrinsicContentSize" width="374" height="16"/>
-        </designable>
-        <designable name="iPk-Za-mRP">
-            <size key="intrinsicContentSize" width="154" height="34"/>
-        </designable>
-        <designable name="yG0-dM-swx">
-            <size key="intrinsicContentSize" width="374" height="16"/>
-        </designable>
-    </designables>
     <resources>
         <image name="candle" width="700" height="700"/>
         <image name="cart-icon" width="25" height="25"/>
+        <image name="close-icon" width="512" height="512"/>
         <image name="feed-icon" width="25" height="25"/>
         <image name="search-icon" width="256" height="256"/>
         <namedColor name="Primary">

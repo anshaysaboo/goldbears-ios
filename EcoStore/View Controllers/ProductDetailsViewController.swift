@@ -29,17 +29,26 @@ class ProductDetailsViewController: UIViewController {
         priceLabel.text = String(format: "$%.2f", product.price)
         storeLabel.setTitle("By " + product.storeTitle, for: .normal)
         descriptionView.text = product.description
-        charityLabel.text = "\(  product.percentDonated)% goes to \(product.charity)"
+        charityLabel.text = "\(Int(product.percentDonated))% goes to \(product.charity)"
         
         if product.hasImage() {
             imageView.loadImage(withURL: URL(string: product.imageUrl)!)
         }
+        
+        charityLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openCharityLink)))
+        charityLabel.isUserInteractionEnabled = true
         
         let goal = Int.random(in: 2...10) * 1000
         let moneyRaised = Int.random(in: 0...999) + (goal - Int.random(in: 0...(goal / 2) - 1000))
         goalLabel.text = "$\(moneyRaised) out of $\(goal) raised!"
         progressBar.progress = Float(moneyRaised) / Float(goal)
         tagsView.addTags(product!.tags)
+    }
+    
+    @objc func openCharityLink() {
+        if let url = URL(string: product!.charityLink) {
+            UIApplication.shared.open(url)
+        }
     }
 
     @IBAction func storeLabelClicked(_ sender: Any) {

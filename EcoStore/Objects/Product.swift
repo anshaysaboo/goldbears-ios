@@ -17,6 +17,7 @@ class Product {
     var charity = ""
     var percentDonated = 0.0
     var imageUrl = ""
+    var charityLink = ""
     
     var storeTitle = ""
     var storeId = ""
@@ -26,6 +27,7 @@ class Product {
         self.description = json["description"].string!
         self.price = json["price"].double!
         self.charity = json["charity"].string!
+        self.charityLink = json["charityLink"].string!
         self.percentDonated = json["percentToCharity"].double!
         for tagJson: JSON in json["tags"].array! {
             tags.append(tagJson.string!)
