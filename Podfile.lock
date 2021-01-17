@@ -1,12 +1,16 @@
 PODS:
   - Alamofire (5.2.2)
   - Cosmos (23.0.0)
+  - Kingfisher (5.15.1):
+    - Kingfisher/Core (= 5.15.1)
+  - Kingfisher/Core (5.15.1)
   - SwiftyJSON (5.0.0)
   - TagListView (1.4.1)
 
 DEPENDENCIES:
   - Alamofire
   - Cosmos (~> 23.0)
+  - Kingfisher (~> 5.0)
   - SwiftyJSON
   - TagListView (~> 1.0)
 
@@ -14,15 +18,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Cosmos
+    - Kingfisher
     - SwiftyJSON
     - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  Kingfisher: 3260a05e78a17fdbeb2f14dd8e66ffc768491231
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: c16144de20987b227262236c55d1face89f12269
+PODFILE CHECKSUM: 80b6102927f93284e4040fdd9026840c7d16b64f
 
 COCOAPODS: 1.9.1

@@ -19,9 +19,6 @@ class ShopViewController: UIViewController {
     override func viewDidLoad() {
         shopCollectionView.delegate = self
         shopCollectionView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         loadStore()
     }
     
@@ -57,6 +54,10 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
             headerView.titleLabel.text = store!.title
             headerView.ownerLabel.text = "By @" + store!.owner
             headerView.descriptionLabel.text = store!.description
+            if !store!.imageUrl.isEmpty {
+                headerView.headerImage.loadImage(withURL: URL(string: store!.imageUrl)!)
+            }
+            headerView.totalRaisedLabel.text = "Raised over $\(Int.random(in: 4...10) * 1000) for Climate Change and BLM."
             return headerView
         case UICollectionView.elementKindSectionFooter:
             return UICollectionReusableView()

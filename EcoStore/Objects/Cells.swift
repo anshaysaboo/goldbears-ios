@@ -22,6 +22,12 @@ class ProductCollectionViewCell: UICollectionViewCell {
         self.tagView.removeAllTags()
         self.tagView.addTags(product.tags)
         self.priceLabel.text = String(format: "$%.2f", product.price)
+        self.iconView.layer.cornerRadius = 5.0
+        self.iconView.clipsToBounds = true
+        self.iconView.contentMode = .scaleAspectFill
+        if product.hasImage() {
+            iconView.loadImage(withURL: URL(string: product.imageUrl)!)
+        }
     }
 }
 
@@ -29,5 +35,6 @@ class ShopHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var totalRaisedLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 }

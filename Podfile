@@ -10,5 +10,6 @@ target 'EcoStore' do
   pod 'SwiftyJSON'
   pod 'TagListView', '~> 1.0'
   pod 'Cosmos', '~> 23.0'
+  pod 'Kingfisher', '~> 5.0'
 
 end
